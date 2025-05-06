@@ -65,12 +65,12 @@
             box-shadow: 0 6px 12px rgba(0, 229, 255, 0.3);
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: #00e5ff;
             margin-bottom: 1.5rem;
         }
 
-        p, li {
+        p {
             color: #b0b0b0;
             margin-bottom: 1rem;
         }
@@ -83,6 +83,19 @@
 
         li {
             padding: 0.5rem 0;
+        }
+
+        .model-container {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid #00e5ff;
+        }
+
+        .model-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 1rem 0;
         }
 
         footer {
@@ -231,6 +244,10 @@
                 <li>SVC (Support Vector Classifier)</li>
                 <li>GaussianNB (Naive Bayes)</li>
                 <li>LogisticRegression</li>
+                <li>LinearDiscriminantAnalysis</li>
+                <li>RidgeClassifier</li>
+                <li>ExtraTreesClassifier</li>
+                <li>NeuralNetwork</li>
             </ul>
             <p>These models were implemented using scikit-learn, with LogisticRegression tuned for up to 500 iterations.</p>
         </div>
@@ -239,15 +256,102 @@
     <section id="results">
         <div class="card">
             <h2>Results</h2>
-            <p>Model performance was evaluated using key metrics such as:</p>
-            <ul>
-                <li>Accuracy</li>
-                <li>Precision (weighted average)</li>
-                <li>Recall (weighted average)</li>
-                <li>F1-Score (weighted average)</li>
-                <li>Confusion Matrix</li>
-            </ul>
-            <p>Results for each metric were formatted to four decimal places for precision. Detailed performance metrics will be updated soon.</p>
+            <div class="model-container">
+                <h3>Logistic Regression</h3>
+                <p>Accuracy: 0.7068</p>
+                <p>Precision: 0.6318</p>
+                <p>Recall: 0.7068</p>
+                <p>F1-Score: 0.6411</p>
+                <img src="images/logistic_regression_results.png" alt="Logistic Regression Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Random Forest</h3>
+                <p>Accuracy: 0.8974</p>
+                <p>Precision: 0.8997</p>
+                <p>Recall: 0.8974</p>
+                <p>F1-Score: 0.8883</p>
+                <img src="images/random_forest_results.png" alt="Random Forest Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Decision Tree</h3>
+                <p>Accuracy: 0.8427</p>
+                <p>Precision: 0.8444</p>
+                <p>Recall: 0.8427</p>
+                <p>F1-Score: 0.8435</p>
+                <img src="images/decision_tree_results.png" alt="Decision Tree Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Linear SVC (Small Train)</h3>
+                <p>Accuracy: 0.7846</p>
+                <p>Precision: 0.7144</p>
+                <p>Recall: 0.7846</p>
+                <p>F1-Score: 0.7192</p>
+                <img src="images/linear_svc_results.png" alt="Linear SVC Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>K-Nearest Neighbors</h3>
+                <p>Accuracy: 0.8175</p>
+                <p>Precision: 0.8011</p>
+                <p>Recall: 0.8175</p>
+                <p>F1-Score: 0.7989</p>
+                <img src="images/k_nearest_neighbors_results.png" alt="K-Nearest Neighbors Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Naive Bayes</h3>
+                <p>Accuracy: 0.7757</p>
+                <p>Precision: 0.7012</p>
+                <p>Recall: 0.7757</p>
+                <p>F1-Score: 0.7341</p>
+                <img src="images/naive_bayes_results.png" alt="Naive Bayes Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>AdaBoost</h3>
+                <p>Accuracy: 0.7757</p>
+                <p>Precision: 0.7012</p>
+                <p>Recall: 0.7757</p>
+                <p>F1-Score: 0.7341</p>
+                <img src="images/adaboost_results.png" alt="AdaBoost Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Extra Trees Classifier</h3>
+                <p>Precision: 0.8886</p>
+                <p>Recall: 0.8902</p>
+                <p>F1-Score: 0.8817</p>
+                <img src="images/extra_trees_classifier_results.png" alt="Extra Trees Classifier Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Ridge Classifier</h3>
+                <p>Precision: 0.8570</p>
+                <p>Recall: 0.8399</p>
+                <p>F1-Score: 0.8066</p>
+                <img src="images/ridge_classifier_results.png" alt="Ridge Classifier Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Linear Discriminant Analysis</h3>
+                <p>Accuracy: [To be updated]</p>
+                <p>Precision: [To be updated]</p>
+                <p>Recall: [To be updated]</p>
+                <p>F1-Score: [To be updated]</p>
+                <img src="images/linear_discriminant_analysis_results.png" alt="Linear Discriminant Analysis Results Visualization">
+            </div>
+
+            <div class="model-container">
+                <h3>Neural Network</h3>
+                <p>Accuracy: [To be updated]</p>
+                <p>Precision: [To be updated]</p>
+                <p>Recall: [To be updated]</p>
+                <p>F1-Score: [To be updated]</p>
+                <img src="images/neural_network_results.png" alt="Neural Network Results Visualization">
+            </div>
         </div>
     </section>
 
