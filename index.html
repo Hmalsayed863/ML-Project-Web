@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML-Based Intrusion Detection System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #00e5ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff4081;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 229, 255, 0.3);
+        }
+
+        h1, h2 {
+            color: #00e5ff;
+            margin-bottom: 1.5rem;
+        }
+
+        p, li {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+            margin-left: 1rem;
+        }
+
+        li {
+            padding: 0.5rem 0;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            padding: 1rem;
+            text-align: center;
+            color: #b0b0b0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #home {
+            background: linear-gradient(45deg, #1e1e1e, #2a2a2a);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        #problem .card::before {
+            content: "\f1e6";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #ff4081;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        #dataset .card::before {
+            content: "\f1c0";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #00e5ff;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        #methods .card::before {
+            content: "\f085";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #ff4081;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        #results .card::before {
+            content: "\f201";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #00e5ff;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        #conclusion .card::before {
+            content: "\f0e0";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #ff4081;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        #team .card::before {
+            content: "\f0c0";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #00e5ff;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#dataset">Dataset</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="card">
+            <h1>ML-Based Intrusion Detection System</h1>
+            <p>A cutting-edge solution leveraging machine learning to enhance cybersecurity through real-time threat detection.</p>
+        </div>
+    </section>
+
+    <section id="problem">
+        <div class="card">
+            <h2>Problem</h2>
+            <p>Modern cybersecurity demands real-time and intelligent intrusion detection systems (IDS) to combat evolving threats like malware, DDoS attacks, and MITM exploits.</p>
+        </div>
+    </section>
+
+    <section id="dataset">
+        <div class="card">
+            <h2>Dataset</h2>
+            <p>The system was trained and tested on diverse datasets including:</p>
+            <ul>
+                <li>backdoor_malware</li>
+                <li>benigntraffic</li>
+                <li>ddos-syn_flood15</li>
+                <li>ddos-syn_flood1</li>
+                <li>MITM-arpspoofing1</li>
+                <li>reon-portscan</li>
+            </ul>
+            <p>These datasets represent a range of malicious and benign network traffic scenarios.</p>
+        </div>
+    </section>
+
+    <section id="methods">
+        <div class="card">
+            <h2>Methods</h2>
+            <p>The intrusion detection system employs a variety of machine learning algorithms, including:</p>
+            <ul>
+                <li>RandomForestClassifier</li>
+                <li>AdaBoostClassifier</li>
+                <li>GradientBoostingClassifier</li>
+                <li>DecisionTreeClassifier</li>
+                <li>KNeighborsClassifier</li>
+                <li>SVC (Support Vector Classifier)</li>
+                <li>GaussianNB (Naive Bayes)</li>
+                <li>LogisticRegression</li>
+            </ul>
+            <p>These models were implemented using scikit-learn, with LogisticRegression tuned for up to 500 iterations.</p>
+        </div>
+    </section>
+
+    <section id="results">
+        <div class="card">
+            <h2>Results</h2>
+            <p>Model performance was evaluated using key metrics such as:</p>
+            <ul>
+                <li>Accuracy</li>
+                <li>Precision (weighted average)</li>
+                <li>Recall (weighted average)</li>
+                <li>F1-Score (weighted average)</li>
+                <li>Confusion Matrix</li>
+            </ul>
+            <p>Results for each metric were formatted to four decimal places for precision. Detailed performance metrics will be updated soon.</p>
+        </div>
+    </section>
+
+    <section id="conclusion">
+        <div class="card">
+            <h2>Conclusion</h2>
+            <p>The ML-based intrusion detection system demonstrates promising potential in identifying and mitigating network threats in real-time. By leveraging a diverse set of algorithms, the system achieves robust performance across various attack scenarios. Future work will focus on improving model accuracy and reducing false positives to enhance reliability in production environments.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="card">
+            <h2>Team</h2>
+            <ul>
+                <li>Hassan Alsayed</li>
+                <li>Mohammed Albarazi</li>
+                <li>Arwa Alomari</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 ML-Based Intrusion Detection System Project</p>
+    </footer>
+</body>
+</html>
